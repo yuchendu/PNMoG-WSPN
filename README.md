@@ -24,15 +24,25 @@ In this model, the healthy fundus image backgrounds are characterized by their l
 As the patch size increases, the dimension of the Gaussian calculations increases dramatically, leading to instability. Our algorithm down-samples patches larger than 2x2 to 2x2 for patch-based Gaussian calculations. To test larger patch sizes, please call the function PNMoG_WSPN_patch.m. 
 ## Citations
 If you use this algorithm, please cite:
+
 @ARTICLE{9966440,
+  
   author={Du, Yuchen and Wang, Lisheng and Meng, Deyu and Chen, Benzhi and An, Chengyang and Liu, Hao and Liu, Weiping and Xu, Yupeng and Fan, Ying and Feng, Dagan and Wang, Xiuying and Xu, Xun},
+  
   journal={IEEE Transactions on Medical Imaging}, 
+  
   title={Individualized Statistical Modeling of Lesions in Fundus Images for Anomaly Detection}, 
+  
   year={2023},
+  
   volume={42},
+  
   number={4},
+  
   pages={1185-1196},
+  
   keywords={Lesions;Image reconstruction;Anomaly detection;Adaptation models;Measurement;Solid modeling;Sociology;Anomaly detection;non-independent and identical distribution;mixture of Gaussian;weighted Schatten p-Norm;normal personalized variations},
+  
   doi={10.1109/TMI.2022.3225422}}
 ## Contact
 If you have any questions, please feel free to contact yuchendu@rocketmail.com
