@@ -1,4 +1,4 @@
-function [AUC_bigben,map,FPR,SE,PPv] = AUC_MAP(groundtruth,inputTensor)
+function [AUC,map,FPR,SE,PPv] = AUC_MAP(groundtruth,inputTensor)
 
 Mat_Truth = double(tenmat(groundtruth,3)');
 Mat_Truth(Mat_Truth>0) = 1;
@@ -93,7 +93,7 @@ SE = [];
     FPR=FPR';
     
     [fprSort, fprSortInd] = sort(FPR,'ascend');
-    AUC_bigben = trapz([0 fprSort 1],[0 SE(fprSortInd) 1]);
+    AUC = trapz([0 fprSort 1],[0 SE(fprSortInd) 1]);
 
 
     [seSort, seSortInd] = sort(SE,'ascend');
