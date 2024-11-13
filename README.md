@@ -10,4 +10,10 @@ The overall mathematical model of the proposed method is listed as below:
 
 ![The mathematical model](https://github.com/yuchendu/PNMoG-WSPN/blob/main/equation.png)
 
-Where the healthy fundus image backgrounds are modeled by their low-rank property with NPV, which is constrained by Schatten p-norm shown as the first item in the above model. The diverse lesions are regularized by both sparsity property and non-i.i.d. property, shown in the second item (L-1 norm) and the third item (multi-MoG) in the above model, respectively.
+Where the healthy fundus image backgrounds are modeled by their low-rank property with NPV, which is constrained by Schatten p-norm shown as the first item in the above model. The diverse lesions are regularized by both sparsity property and non-i.i.d. property, shown in the second item (L-1 norm) and the third item (patch-based multi-MoG) in the above model, respectively.
+## How to use
+### Environment and necessary packages
+1. The codes are implemented under MATLAB 2018b platform. A MATLAB software must be required to run the code. 
+2. The users should change the folders directions to their local directions.
+3. Some tensor calculation related third-party packages are required, such as tenmat.m
+### Running time consuming and memory consuming
