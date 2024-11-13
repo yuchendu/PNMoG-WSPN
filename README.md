@@ -6,3 +6,4 @@ Anomaly detection in fundus images remains challenging due to the fact that fund
 The overall mathematical model of the proposed method is listed as below:
 
 ![The mathematical model](https://github.com/yuchendu/PNMoG-WSPN/blob/main/equation.png)
+Where the healthy fundus image backgrounds are modeled by their low-rank property with NPV, which is constrained by Schatten p-norm shown as the first item in the above model. The diverse lesions are regularized by both sparsity property and non-i.i.d. property, shown in the second item (L-1 norm) and the third item (multi-MoG) in the above model, respectively.
