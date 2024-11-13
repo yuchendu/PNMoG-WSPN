@@ -1,17 +1,4 @@
 function [RPCA_model,MoG_model,residual]=PNMoG_WSPN_patch(X,RPCA_param,MoG_param)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% this file aims to build a matrix consists of tremendous amount of normal
-% images and some of abnormal images. the lesion of ALL abnormal images 
-% could be decomposed out at one time.
-% before running this file, one should notice that the original input
-% matrix has been centralized in advance. that means the single vectors of 
-% svd represent the principle components.
-% another property of this program is that once the mask exists, the masked
-% components would be removed, thus, the dimension declined through this
-% procedure.
-% NOTICE: when one trys to recover the matrix, do not forget to add the
-% mean value.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if nargin < 1
     disp('input parameter required');
