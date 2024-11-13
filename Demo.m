@@ -1,12 +1,12 @@
 % clear;
 % clc;
 %% normal and abnormal fundus images loading
-path_ab_K = '..\EvaluationMethod\193\193\(436-422)RemVesVesRGB(193)changename';
+path_ab_K = 'abnormal_image_folder_path';
 [ImgTensor_ab_K,file_ab_K] = fileloading(path_ab_K,2,'*.bmp');
 ImgTensor_ab = double(ImgTensor_ab_K);
 num_ab = size(ImgTensor_ab,3);
 
-path_nor = '..\imageNormal';
+path_nor = 'normal_image_folder_path';
 [ImgTensor_nor,~] = fileloading(path_nor,2,'*.bmp');
 ImgTensor_nor = double(ImgTensor_nor);
 
@@ -46,8 +46,8 @@ Output_E = lr_model.E(:,:,1:num_ab);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% evaluation
-path_groundtruth = '..\groundtruth\193_org_num';
-[groundtruthTensor,~] = fileloading(path_groundtruth_K,1,'*.bmp');
+path_groundtruth = 'groundtruth_image_folder_path';
+[groundtruthTensor,~] = fileloading(path_groundtruth,1,'*.bmp');
 [auc,pr,FPR,SE,PPv] = AUC_MAP(groundtruthTensor,Output_E);
 disp(['p__',num2str(p),...
     '__alpha_',num2str(alpha),...
