@@ -23,8 +23,9 @@ In this model, the healthy fundus image backgrounds are characterized by their l
 ### For large patch sizes
 As the patch size increases, the dimension of the Gaussian calculations increases dramatically, leading to instability. Our algorithm down-samples patches larger than 2x2 to 2x2 for patch-based Gaussian calculations. To test larger patch sizes, please call the function PNMoG_WSPN_patch.m. 
 ## Citations
-If you use this algorithm, please cite:
+If you find this model useful for your research, please consider citing:
 
+```bibtex
 @ARTICLE{9966440,
   author={Du, Yuchen and Wang, Lisheng and Meng, Deyu and Chen, Benzhi and An, Chengyang and Liu, Hao and Liu, Weiping and Xu, Yupeng and Fan, Ying and Feng, Dagan and Wang, Xiuying and Xu, Xun},
   journal={IEEE Transactions on Medical Imaging}, 
@@ -34,5 +35,7 @@ If you use this algorithm, please cite:
   number={4},
   pages={1185-1196},
   doi={10.1109/TMI.2022.3225422}}
+```
+
 ## Contact
 If you have any questions, please feel free to contact yuchendu@rocketmail.com
